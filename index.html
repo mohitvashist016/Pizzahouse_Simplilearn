@@ -1,0 +1,419 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pizza House</title>
+
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    /> -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto+Slab:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+      nav {
+        display: flex;
+
+        background-color: white;
+        height: 50px;
+        align-items: center;
+        font-family: "Poppins", sans-serif;
+      }
+      nav .centernav {
+        display: flex;
+        align-items: center;
+        margin-left: 0 50px;
+      }
+      li {
+        list-style: none;
+        margin: 20px;
+        align-items: center;
+        text-align: center;
+      }
+      h3 {
+        margin: 0 50px;
+        font-size: 1.5rem;
+      }
+
+      i {
+        margin: 0 20px;
+      }
+      i:hover {
+        color: green;
+      }
+      button {
+        background-color: rgb(235, 236, 236);
+        width: 100px;
+        height: 35px;
+        border-radius: 10px;
+        color: grey;
+        border-width: 1px;
+        font-family: "Poppins", sans-serif;
+        margin-left: 20px;
+      }
+      input {
+        border-radius: 5px;
+        border-width: 0.3px;
+        width: 350px;
+        padding: 0 20px;
+        height: 35px;
+        margin-left: 20px;
+        font-family: "Poppins", sans-serif;
+      }
+      button:hover {
+        background-color: green;
+        color: white;
+      }
+      nav .rightnav {
+        display: flex;
+        align-items: center;
+        margin-left: 150px;
+      }
+      li a {
+        text-decoration: none;
+        color: black;
+      }
+      li a:hover {
+        color: green;
+      }
+      .sec1 {
+        display: flex;
+      }
+      img{
+        border-radius: 100%;
+        height: 180px;
+        width: 180px;
+      }
+      .sec1_in{
+        margin: 0 25px;
+        text-align: center;
+      }
+      
+      .pizza_type{
+        margin:40px 50px;
+        font-family: "Poppins", sans-serif;
+      }
+      .brand_type{
+        margin:40px 50px;
+        font-family: "Poppins", sans-serif;
+      }
+      .sec2_in{
+        margin: 0 25px;
+        text-align: center;
+      }
+      .sec2 {
+        display: flex;
+      }
+      .top1{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgb(244, 246, 247);
+        height: 400px;
+        margin-top: 15px;
+      }
+    
+      .heading{
+        width: 450px;
+        margin-left: 50px;
+        font-family: "Poppins", sans-serif;
+      }
+      .hh{
+        font-size: 3rem;
+        
+      }
+      .ord{
+        background-color: green;
+        color: white;
+        width: 190px;
+        height: 40px;
+        font-size: 18px;
+        margin:0;
+      }
+      .head_img{
+        height: 400px;
+        width: 450px;
+        margin-right: 80px;
+        align-items: center;
+      }
+      .threetop{
+        display: flex;
+        margin-left: 50px;
+        justify-content: space-between;
+        margin-right: 50px;
+        margin-top: 20px;
+        font-family: "Poppins", sans-serif;
+        text-align: left;
+        
+        
+      }
+      .third1{
+        height: 300px;
+        width: 420px;
+       
+        margin-right: 20px;
+        align-items: center;
+        text-align: center;
+        border-radius: 10px;
+        text-align: left;
+      }
+      .third1:hover{
+        height:305px;
+        width: 435px;
+        text-shadow: grey;
+        box-shadow: 10px;
+        border-style: solid;
+        border-width: 0.5px;
+        border-color: rgb(188, 196, 196);
+      }
+      .threeimg{
+        height: 220px;
+        border-radius: 0%;
+        width: 100%;
+        margin-bottom: 10px;
+        border-radius: 10px;
+      }
+      .sectionheading3{
+        font-family: "Poppins", sans-serif;
+        margin-left: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="leftnav">
+        <h3>Pizza House</h3>
+      </div>
+      <div class="centernav">
+        <input
+          type="text"
+          placeholder="Search for resturant, cuisine or dish"
+        />
+        <button type="submit">Search</button>
+      </div>
+      <div class="rightnav">
+        <li><a href="loginpage.html">Login</a></li>
+        <li><a href="loginpage.html">Sign Up </a></li>
+        <i class="fa-solid fa-heart fa-lg"></i>
+        <i class="fa-solid fa-cart-shopping fa-lg" onclick="window.location.href='resturant.html'"></i>
+      </div>
+      
+    </nav>
+    <section class="toppart">
+        <div class="top1">
+            <div class="heading">
+                <h1 class="hh"><div>Enjoy all your</div> <span id="element"></span> <div>Pizza at one place</div></h1>
+                <button class="ord" onclick="window.location.href='resturant.html';">Order Now</button>
+            </div>
+            <div class="heading_imag">
+                <img class="head_img" src="pizza2.png">
+            </div>
+        </div>
+      </section>
+
+    <section class="first">
+      <div class="pizza_type" >
+        <h1>Inspiration for your first order</h1>
+        <div class="sec1">
+          <div class="sec1_in">
+            <img src="mar_p.jpg" onclick="window.location.href='resturant.html'"/>
+            <h4>Margherita</h4>
+          </div>
+          <div class="sec1_in">
+            <img src="veg_p.jpg" onclick="window.location.href='resturant.html'"/>
+            <h4>Veggie Max</h4>
+          </div>
+          <div class="sec1_in">
+            <img src="Nonveg_p4.jpg" onclick="window.location.href='resturant.html'"/>
+            <h4>Non-Veg</h4>
+          </div>
+          <div class="sec1_in">
+            <img src="gourmet_p.jpg" onclick="window.location.href='resturant.html'"/>
+            <h4>Gourmet</h4>
+          </div class="sec1_in">
+          <div class="sec1_in">
+            <img src="chesse_p.jpg" onclick="window.location.href='resturant.html'"/>
+            <h4>Chessy</h4>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="second">
+        <div class="brand_type" >
+          <h1>Top Brands For You</h1>
+          <div class="sec2">
+            
+            <div class="sec2_in">
+              <img src="dominos2.png"   onclick="abc()"/>
+              <h4 id="tl" >Domino's</h4>
+            </div>
+          
+            <div class="sec2_in">
+              <img src="pizzahut.png" onclick="abc2()"/>
+              <h4 id="tl2">Pizza Hut</h4>
+            </div>
+            <div class="sec2_in">
+              <img src="burgerking.png" onclick="abc3()" />
+              <h4 id="tl3">Burger King</h4>
+            </div>
+            <div class="sec2_in">
+              <img src="lapinoz.png" onclick="abc4()" />
+              <h4 id="tl4">La Pino'z</h4>
+            </div>
+            <div class="sec2_in">
+              <img src="instapizza.png" onclick="abc5()" />
+              <h4 id="tl5">Insta Pizza</h4>
+            </div>
+          </div>
+        </div>
+      </section>
+      <h2 class="sectionheading3"> Best Pizza in your area</h2>
+      <section class="three">
+        <div class="threetop">
+        <div class="third1" onclick="abc()"">
+            <img class="threeimg" src="area1.jpg">
+            <div style="background-color: white; margin: 0;"><h4 style="margin: 0; text-align: left; margin-left: 10px;">Dominos Pizza</h4></div>
+            <span class="fa fa-star checked" style="margin-left: 10px; color: orange"></span>
+<span class="fa fa-star checked " style="color: orange"></span>
+<span class="fa fa-star checked" style="color: orange;"></span>
+<span class="fa fa-star checked" style="color: orange;"></span>
+<span class="fa fa-star checked" style="color: orange;"></span>
+
+            <!-- <div style="background-color: white;margin-top: 5px;">Ratings:-</div> -->
+            <!-- <p style="position: relative; top: -100px; background-color: blue; display: inline; ">50% off upto 100</p> -->
+        </div>
+        <div class="third1"  onclick="abc2()">
+            <img class="threeimg" src="area2.jpg">
+            <div style="background-color: white; margin: 0;"><h4 style="margin: 0; text-align: left; margin-left: 10px;">Pizza Hut</h4></div>
+            <!-- <div style="background-color: white;margin-top: 5px;">Ratings:-</div> -->
+            <!-- <p style="position: relative;">50% off upto 100</p> -->
+            <span class="fa fa-star checked" style="margin-left: 10px; color: orange"></span>
+            <span class="fa fa-star checked " style="color: orange"></span>
+            <span class="fa fa-star checked" style="color: orange;"></span>
+            <span class="fa fa-star checked" style="color: orange;"></span>
+            <span class="fa fa-star" ></span>
+        </div>
+        <div class="third1" onclick="abc7()">
+            <img class="threeimg" src="area4.jpg">
+            <div style="background-color: white; margin: 0;"><h4 style="margin: 0; text-align: left; margin-left: 10px;">Oven Story Pizza</h4></div>
+            <!-- <div style="background-color: white;margin-top: 5px;">Ratings:-</div> -->
+            <span class="fa fa-star checked" style="margin-left: 10px; color: orange"></span>
+            <span class="fa fa-star checked " style="color: orange"></span>
+            <span class="fa fa-star checked" style="color: orange;"></span>
+            <span class="fa fa-star checked" style="color: orange;"></span>
+            <span class="fa fa-star" ></span>
+        </div>
+        
+    </div>
+    <div class="threetop">
+        <div class="third1" onclick="abc5()">
+            <img class="threeimg" src="area5.jpg">
+            <div style="background-color: white; margin: 0;"><h4 style="margin: 0; text-align: left; margin-left: 10px;">Insta Pizza</h4></div>
+            <!-- <div style="background-color: white;margin-top: 5px;">Ratings:-</div> -->
+            <span class="fa fa-star checked" style="margin-left: 10px; color: orange"></span>
+            <span class="fa fa-star checked " style="color: orange"></span>
+            <span class="fa fa-star checked" style="color: orange;"></span>
+            <span class="fa fa-star " ></span>
+            <span class="fa fa-star" ></span>
+            
+        </div>
+        <div class="third1" onclick="abc6()">
+            <img class="threeimg" src="area8.jpg">
+            <div style="background-color: white; margin: 0;"><h4 style="margin: 0; text-align: left; margin-left: 10px;">Mojo Pizza </h4></div>
+            <!-- <div style="background-color: white;margin-top: 5px;">Ratings:-</div> -->
+            <span class="fa fa-star checked" style="margin-left: 10px; color: orange"></span>
+            <span class="fa fa-star checked " style="color: orange"></span>
+            <span class="fa fa-star checked" style="color: orange;"></span>
+            <span class="fa fa-star checked" style="color: orange;"></span>
+            <span class="fa fa-star" ></span>
+           
+        </div>
+        <div class="third1" onclick="abc4()">
+            <img class="threeimg" src="area7.jpg">
+            <div style="background-color: white; margin: 0;"><h4 style="margin: 0; text-align: left; margin-left: 10px;">La Pionz Pizza</h4></div>
+            <!-- <div style="background-color: white;margin-top: 5px;">Ratings:-</div> -->
+            <span class="fa fa-star checked" style="margin-left: 10px; color: orange"></span>
+            <span class="fa fa-star checked " style="color: orange"></span>
+            <span class="fa fa-star checked" style="color: orange;"></span>
+            <span class="fa fa-star "></span>
+            <span class="fa fa-star" ></span>
+            
+        </div>
+      </section>      
+      <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+      <!-- Setup and start animation! -->
+      <script>
+        var typed = new Typed("#element", {
+          strings: [
+            "Favourite",
+            "Margherita",
+            "Chessy",
+            "Veggie Blast",
+            "Gourmet"
+          ],
+          typeSpeed: 50,
+        });
+      </script>
+        
+  </body>
+  <script>
+    function abc(){
+      localStorage.clear();
+      var sss = document.getElementById("tl").innerText;
+      // var abc = document.getElementById("tl").innerText;
+      // const abc="Mohit";
+      //    const myobjectstring = JSON.stringify(abc);
+      //    localStorage.setItem("ss", myobjectstring);
+   localStorage.setItem("myValue", sss);
+   window.location.href= "resturant.html";
+    }
+    function abc2(){
+      
+      var sss = document.getElementById("tl2").innerText;
+      
+   localStorage.setItem("myValue", sss);
+   window.location.href= "resturant.html";
+    }
+    function abc3(){
+      
+      var sss = document.getElementById("tl3").innerText;
+      
+   localStorage.setItem("myValue", sss);
+   window.location.href= "resturant.html";
+    }
+    function abc4(){
+      
+      var sss = document.getElementById("tl4").innerText;
+      
+   localStorage.setItem("myValue", sss);
+   window.location.href= "resturant.html";
+    }
+    function abc5(){
+       var sss = document.getElementById("tl5").innerText;    
+   localStorage.setItem("myValue", sss);
+   window.location.href= "resturant.html";
+    }
+    function abc6(){
+       var sss = "Mojo Pizza"    
+   localStorage.setItem("myValue", sss);
+   window.location.href= "resturant.html";
+    }
+    function abc7(){
+       var sss = "Ovenstory Pizza"  
+   localStorage.setItem("myValue", sss);
+   window.location.href= "resturant.html";
+    }
+   
+    
+   
+  </script>
+</html>

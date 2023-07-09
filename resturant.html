@@ -1,0 +1,472 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto+Slab:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+      }
+      .res {
+        display: flex;
+      }
+      .leftres {
+        margin-left: 50px;
+        width: 700px;
+        padding: 10px;
+      }
+      .leftresin {
+        display: flex;
+        /* justify-content: space-around; */
+      }
+      .rightres {
+        width: 350px;
+        position: fixed;
+        top: 100px;
+
+        left: 820px;
+        border-radius: 10px;
+        box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+        padding: 10px;
+      }
+      .resintro {
+        margin-left: 20px;
+        margin-top: 5px;
+      }
+      .resimg {
+        height: 100px;
+        width: 100px;
+        border-radius: 10px;
+      }
+      .resphead {
+        margin: 0;
+      }
+      .respprice {
+        margin: 0;
+      }
+      .respdes {
+        margin: 0;
+      }
+      .addcart {
+        width: 70px;
+        height: 25px;
+        background-color: green;
+        color: white;
+        border-radius: 10px;
+        border: none;
+        margin-top: 40px;
+        margin-left: 40px;
+        cursor: pointer;
+      }
+      .order {
+        color: white;
+        border: none;
+        background-color: green;
+        border-radius: 10px;
+        height: 27px;
+        width: 150px;
+      }
+      .respdes {
+        font-size: 12px;
+        width: 350px;
+      }
+      #resheading {
+        font-family: "Poppins", sans-serif;
+        margin-top: 20px;
+        margin-left: 70px;
+        font-size: 20px;
+      }
+      nav {
+        display: flex;
+
+        background-color: white;
+        height: 50px;
+        align-items: center;
+        font-family: "Poppins", sans-serif;
+      }
+      nav .centernav {
+        display: flex;
+        align-items: center;
+        margin-left: 0 50px;
+      }
+      li {
+        list-style: none;
+        margin: 20px;
+        align-items: center;
+        text-align: center;
+      }
+      h3 {
+        margin: 0 50px;
+        font-size: 1.5rem;
+      }
+
+      i {
+        margin: 0 20px;
+      }
+      i:hover {
+        color: green;
+      }
+      button {
+        background-color: rgb(235, 236, 236);
+        width: 100px;
+        height: 35px;
+        border-radius: 10px;
+        color: grey;
+        border-width: 1px;
+        font-family: "Poppins", sans-serif;
+        margin-left: 20px;
+      }
+      input {
+        border-radius: 5px;
+        border-width: 0.3px;
+        width: 350px;
+        padding: 0 20px;
+        height: 35px;
+        margin-left: 20px;
+        font-family: "Poppins", sans-serif;
+      }
+      button:hover {
+        background-color: green;
+        color: white;
+      }
+      nav .rightnav {
+        display: flex;
+        align-items: center;
+        margin-left: 150px;
+      }
+      li a {
+        text-decoration: none;
+        color: black;
+      }
+      li a:hover {
+        color: green;
+      }
+      #badge {
+        background-color: red;
+        color: white;
+        height: 13px;
+        width: 13px;
+        margin-left: -28px;
+        margin-top: -17px;
+        text-align: center;
+        border-radius: 100%;
+        font-size: 10px;
+      }
+    </style>
+    <script>
+      window.onload = function () {
+        // Get the value from localStorage
+        var sss = localStorage.getItem("myValue");
+
+        // Display the value on the page
+        var output = document.getElementById("resheading");
+        output.innerText = sss;
+      };
+    </script>
+  </head>
+  <body>
+    <nav>
+      <div class="leftnav">
+        <h3>Pizza House</h3>
+      </div>
+      <div class="centernav">
+        <input
+          type="text"
+          placeholder="Search for resturant, cuisine or dish"
+        />
+        <button type="submit">Search</button>
+      </div>
+      <div class="rightnav">
+        <li><a href="...">Login</a></li>
+        <li><a href="..">Sign Up </a></li>
+        <i class="fa-solid fa-heart fa-lg"></i>
+        <i class="fa-solid fa-cart-shopping fa-lg"></i>
+        <!-- <span id="badge">0</span> -->
+      </div>
+    </nav>
+    <h3 id="resheading">Dom</h3>
+    <div class="res">
+      <div class="leftres">
+        <div class="leftresin">
+          <img class="resimg" src="mar.jpg" alt="..." />
+          <div class="resintro">
+            <h4 class="resphead">Margherita</h4>
+            <h5 class="respprice" id="price">₹ 200</h5>
+            <p class="respdes">
+              A hugely popular margherita, with a deliciously tangy single
+              cheese topping
+            </p>
+          </div>
+
+          <button class="addcart" value="margherita" onclick="abc(value)">
+            Add
+          </button>
+        </div>
+        <div class="leftresin">
+          <img class="resimg" src="farm.jpg" alt="..." />
+          <div class="resintro">
+            <h4 class="resphead">Farm House</h4>
+            <h5 class="respprice">₹ 450</h5>
+            <p class="respdes">
+              A pizza that goes ballistic on veggies! Check out this mouth
+              watering overload of crunchy, crisp capsicum, succulent mushrooms
+              and fresh tomatoes
+            </p>
+          </div>
+          <button class="addcart" value="farm" onclick="abc(value)">Add</button>
+        </div>
+        <div class="leftresin">
+          <img class="resimg" src="pp.jpg" alt="..." />
+          <div class="resintro">
+            <h4 class="resphead">Peppy Panner</h4>
+            <h5 class="respprice">₹ 350</h5>
+            <p class="respdes">
+              Chunky paneer with crisp capsicum and spicy red pepper - quite a
+              mouthful!
+            </p>
+          </div>
+          <button class="addcart" value="peppy" onclick="abc(value)">
+            Add
+          </button>
+        </div>
+        <div class="leftresin">
+          <img class="resimg" src="mgw.jpg" alt="..." />
+          <div class="resintro">
+            <h4 class="resphead">Mexican Green Wave</h4>
+            <h5 class="respprice">₹ 400</h5>
+            <p class="respdes">
+              A pizza loaded with crunchy onions, crisp capsicum, juicy tomatoes
+              and jalapeno with a liberal sprinkling of exotic Mexican herbs.
+            </p>
+          </div>
+          <button class="addcart" value="mexican" onclick="abc(value)">
+            Add
+          </button>
+        </div>
+        <div class="leftresin">
+          <img class="resimg" src="pm.jpg" alt="..." />
+          <div class="resintro">
+            <h4 class="resphead">Panner Makhani</h4>
+            <h5 class="respprice">₹ 320</h5>
+            <p class="respdes">Paneer and Capsicum on Makhani Sauce</p>
+          </div>
+          <button class="addcart" value="pm" onclick="abc(value)">Add</button>
+        </div>
+        <div class="leftresin">
+          <img class="resimg" src="ve.jpg" alt="..." />
+          <div class="resintro">
+            <h4 class="resphead">Veg Extravaganza</h4>
+            <h5 class="respprice">₹ 550</h5>
+            <p class="respdes">
+              A pizza that decidedly staggers under an overload of golden corn,
+              exotic black olives, crunchy onions, crisp capsicum, succulent
+              mushrooms, juicyfresh tomatoes and jalapeno - with extra cheese to
+              go all around.
+            </p>
+          </div>
+          <button class="addcart" value="ve" onclick="abc(value)">Add</button>
+        </div>
+        <div class="leftresin">
+          <img class="resimg" src="dv.jpg" alt="..." />
+          <div class="resintro">
+            <h4 class="resphead">Deluxe Veggie</h4>
+            <h5 class="respprice">₹ 440</h5>
+            <p class="respdes">
+              For a vegetarian looking for a BIG treat that goes easy on the
+              spices, this one's got it all.. The onions, the capsicum, those
+              delectable mushrooms - with paneer and golden corn to top it all.
+            </p>
+          </div>
+          <button class="addcart" value="dv" onclick="abc(value)">Add</button>
+        </div>
+        <div class="leftresin">
+          <img class="resimg" src="gb.jpg" alt="..." />
+          <div class="resintro">
+            <h4 class="resphead">Garlic BreadSticks</h4>
+            <h5 class="respprice">₹ 250</h5>
+            <p class="respdes">
+              The endearing tang of garlic in breadstics baked to perfection.
+            </p>
+          </div>
+          <button class="addcart" value="gb" onclick="abc(value)">Add</button>
+        </div>
+        <div class="leftresin">
+          <img class="resimg" src="bmc.jpg" alt="..." />
+          <div class="resintro">
+            <h4 class="resphead">Butterscotch Cake</h4>
+            <h5 class="respprice">₹ 150</h5>
+            <p class="respdes">
+              A Creamy & Chocolaty indulgence with layers of rich, fluffy
+              Butterscotch Cream and delicious Dark Chocolate Cake, topped with
+              crunchy Dark Chocolate morsels - for a perfect dessert treat!
+            </p>
+          </div>
+          <button class="addcart" value="bc" onclick="abc(value)">Add</button>
+        </div>
+        <div class="leftresin">
+          <img class="resimg" src="vp.jpg" alt="..." />
+          <div class="resintro">
+            <h4 class="resphead">Veg Parcel</h4>
+            <h5 class="respprice">₹ 80</h5>
+            <p class="respdes">
+              A crispy flaky wrap filled with Mexican Arancini Bean Patty rolled
+              over a creamy Harissa Sauce.
+            </p>
+          </div>
+          <button class="addcart" value="vp" onclick="abc(value)">Add</button>
+        </div>
+      </div>
+      <div class="rightres">
+        <h3 style="text-align: center">Checkout</h3>
+        <div style="display: flex; justify-content: space-between">
+          <h4 id="product"></h4>
+          <p id="pp"></p>
+        </div>
+        <div style="display: flex; justify-content: space-between">
+          <h4 id="product2"></h4>
+          <p id="pp2"></p>
+        </div>
+        <div style="display: flex; justify-content: space-between">
+          <h5 style="margin: 5px 0">Packing Charges</h5>
+          <p style="margin: 5px 0">₹ 30</p>
+        </div>
+        <div style="display: flex; justify-content: space-between">
+          <h5 style="margin: 5px 0">Delivery Charges</h5>
+          <p style="margin: 5px 0">₹ 50</p>
+        </div>
+
+        <hr />
+        <div style="display: flex; justify-content: space-between">
+          <h4>Total Amount</h4>
+          <p id="ai">0</p>
+        </div>
+        <div style="text-align: center">
+          <button class="order" onclick="xyz()">Place Order</button>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    // var a = 0;
+    function abc(value) {
+      //   a = a + 1;
+      //   if (a == 1) {
+      if (value == "margherita") {
+        document.getElementById("product").innerHTML = "Margherita";
+        document.getElementById("pp").innerHTML = "₹ 200";
+        document.getElementById("ai").innerHTML = "₹ 280";
+      } else if (value == "farm") {
+        document.getElementById("product").innerHTML = "Farm House";
+        document.getElementById("pp").innerHTML = "₹ 450";
+        document.getElementById("ai").innerHTML = "₹ 530";
+      } else if (value == "peppy") {
+        document.getElementById("product").innerHTML = "Peppy Panner";
+        document.getElementById("pp").innerHTML = "₹ 350";
+        document.getElementById("ai").innerHTML = "₹ 430";
+      } else if (value == "mexican") {
+        document.getElementById("product").innerHTML = "Mexican Green";
+        document.getElementById("pp").innerHTML = "₹ 400";
+        document.getElementById("ai").innerHTML = "₹ 480";
+      } else if (value == "pm") {
+        document.getElementById("product").innerHTML = "Panner Makhani";
+        document.getElementById("pp").innerHTML = "₹ 400";
+        document.getElementById("ai").innerHTML = "₹ 400";
+      } else if (value == "ve") {
+        document.getElementById("product").innerHTML = "Veg Extravaganza";
+        document.getElementById("pp").innerHTML = "₹ 550";
+        document.getElementById("ai").innerHTML = "₹ 630";
+      } else if (value == "dv") {
+        document.getElementById("product").innerHTML = "Deluxe Veggie";
+        document.getElementById("pp").innerHTML = "₹ 440";
+        document.getElementById("ai").innerHTML = "₹ 520";
+      } else if (value == "gb") {
+        document.getElementById("product").innerHTML = "Garlic Breadsticks";
+        document.getElementById("pp").innerHTML = "₹ 250";
+        document.getElementById("ai").innerHTML = "₹ 330";
+      } else if (value == "bc") {
+        document.getElementById("product").innerHTML = "Butterscotch Cake";
+        document.getElementById("pp").innerHTML = "₹ 150";
+        document.getElementById("ai").innerHTML = "₹ 230";
+      } else if (value == "vp") {
+        document.getElementById("product").innerHTML = "Veg Parcel";
+        document.getElementById("pp").innerHTML = "₹ 80";
+        document.getElementById("ai").innerHTML = "₹ 160";
+      }
+    }
+    //   if (a == 2) {
+    //     if (value == "margherita") {
+    //       document.getElementById("product2").innerHTML = "Margherita";
+    //       document.getElementById("pp2").innerHTML = "₹ 200";
+    //       //   document.getElementById("ai").innerHTML = "₹ 480";
+    //     } else if (value == "farm") {
+    //       document.getElementById("product2").innerHTML = "Farm House";
+    //       document.getElementById("pp2").innerHTML = "₹ 450";
+    //     } else if (value == "peppy") {
+    //       document.getElementById("product2").innerHTML = "Peppy Panner";
+    //       document.getElementById("pp2").innerHTML = "₹ 300";
+    //     } else if (value == "mexican") {
+    //       document.getElementById("product2").innerHTML = "Mexican Green";
+    //       document.getElementById("pp2").innerHTML = "₹ 300";
+    //     } else if (value == "pm") {
+    //       document.getElementById("product2").innerHTML = "Panner Makhani";
+    //       document.getElementById("pp2").innerHTML = "₹ 300";
+    //     } else if (value == "ve") {
+    //       document.getElementById("product2").innerHTML = "Veg Extravaganza";
+    //       document.getElementById("pp2").innerHTML = "₹ 300";
+    //     } else if (value == "dv") {
+    //       document.getElementById("product2").innerHTML = "Deluxe Veggie";
+    //       document.getElementById("pp2").innerHTML = "₹ 300";
+    //     } else if (value == "gb") {
+    //       document.getElementById("product2").innerHTML = "Garlic Breadsticks";
+    //       document.getElementById("pp2").innerHTML = "₹ 300";
+    //     } else if (value == "bc") {
+    //       document.getElementById("product").innerHTML = "Butterscotch Cake";
+    //       document.getElementById("pp").innerHTML = "₹ 300";
+    //     } else if (value == "vp") {
+    //       document.getElementById("product2").innerHTML = "Veg Parcel";
+    //       document.getElementById("pp2").innerHTML = "₹ 300";
+    //     }
+    //   }
+    // }
+    // var a = parseInt(document.getElementById("pp").innerText);
+    // var b = parseInt(document.getElementById("pp2").innerText);
+    // var c = a + b;
+    // document.getElementById("ai").innerText = "₹" + c;
+    // const myObjectString2 = localStorage.getItem("ss");
+    // const myObject2 = JSON.parse(myObjectString2);
+    // alert(myObject2);
+
+    var abccc = localStorage.getItem("inputValue");
+    document.getElementsByClassName("resheading").innerText = abccc;
+
+    //   function set() {
+    //     if (
+    //       document.getElementById("product").innerHTML.includes("Margherita")
+    //     ) {
+    //       document.getElementById("p2").innerHTML = "test";
+    //       document.getElementById("df").innerHTML = "500";
+    //     }
+    //   }
+
+    //   const a = document.getElementById("price").innerHTML;
+    //   const b = document.getElementsByClassName("resphead").innerHTML;
+    //   document.getElementById("pp").innerHTML = a;
+    //   document.getElementById("ai").innerHTML = a;
+    //   document.getElementById("product").innerHTML = b;
+    function xyz() {
+      alert("Thank You for Placing your Order");
+    }
+  </script>
+</html>
